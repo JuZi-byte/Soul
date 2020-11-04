@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1B1B1B">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/titile">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="遇见"
+            android:textColor="#03A9F4"
+            android:textSize="@dimen/sp_18"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/img_camera"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/camera"
+            android:layout_toLeftOf="@id/add"/>
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/img_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/add"/>
+
+    </RelativeLayout>
+
+
+    <com.moxun.tagcloudlib.view.TagCloudView
+        android:id="@+id/tagcloud"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_width="@dimen/dp_260"
+        android:layout_height="@dimen/dp_320"
+        android:layout_below="@id/titile"
+        android:layout_centerInParent="true"
+        app:radiusPercent="0.8"
+        app:autoScrollMode="uniform"
+        app:scrollSpeed="0.7">
+    </com.moxun.tagcloudlib.view.TagCloudView>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_below="@id/tagcloud"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_random"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_star_card_1" />
+
+                <TextView
+                    android:id="@+id/tv_random"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随机匹配"
+                    android:textColor="#1B1B1B"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_soul"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#8BC34A"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_star_card_2" />
+
+                <TextView
+                    android:id="@+id/tv_soul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="灵魂匹配"
+                    android:textColor="#1B1B1B"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FF5722"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_star_card_3" />
+
+                <TextView
+                    android:id="@+id/tv_fate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="缘分匹配"
+                    android:textColor="#1B1B1B"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_love"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#673AB7"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_star_card_4" />
+
+                <TextView
+                    android:id="@+id/tv_love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恋爱铃"
+                    android:textColor="#1B1B1B"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>

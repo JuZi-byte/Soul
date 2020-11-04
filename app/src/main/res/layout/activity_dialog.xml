@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DialogActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="一张瓜皮的头像很不错"
+        android:textSize="@dimen/sp_16"
+        android:textColor="#1B1B1B"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_200"
+            android:src="@drawable/ic_launcher"
+            android:layout_centerInParent="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="一个名字，一个故事"
+        android:textSize="@dimen/sp_14"
+        android:textColor="#1B1B1B"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_60"
+        android:layout_marginRight="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape"></EditText>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_60"
+        android:layout_marginRight="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="完成"
+        android:background="#03A9F4"
+        android:textSize="@dimen/sp_16"
+        android:textColor="#F1E9E9"
+        android:gravity="center"/>
+
+</LinearLayout>

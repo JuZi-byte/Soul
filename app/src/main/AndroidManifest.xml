@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tang.xu.mysoul">
+
+    <application
+        android:name=".app.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Soul"
+        android:networkSecurityConfig="@xml/network"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label">
+
+        <activity android:name=".view.PrivateSetActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".view.ShareImgActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".view.PushSquareActivity"/>
+
+        <activity android:name=".view.QrCodeActivity"></activity>
+
+        <activity android:name=".view.LocationActivity"></activity>
+        <activity android:name=".view.PhotoViewActivity" />
+        <activity android:name=".view.ChatActivity" />
+        <activity
+            android:name=".view.NewFriendActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".view.UserInfoActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".view.ContactActivity" />
+        <activity
+            android:name=".view.AddFriendActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".view.DialogActivity" />
+        <activity
+            android:name=".view.AnimotionActivity"
+            android:theme="@style/AppThemeFull" />
+        <activity
+            android:name=".view.SettingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".view.WelcomeActivity"
+            android:theme="@style/AppThemeFull">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".view.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b2edbf7467e09f47fa94307cfcdba66a"></meta-data>
+
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.tang.xu.mysoul.BmobContentProvider" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tang.xu.mysoul.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <receiver
+            android:name=".receiver.SealNotification"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.CloudService" />
+
+
+    </application>
+
+</manifest>

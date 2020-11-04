@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+
+     //调试使用，发布版本删除
+     if (rootProject.hasProperty('devBuild')){
+        splits.abi.enable = false
+        splits.density.enable = false
+
+         //禁止PNG压缩
+         aaptOptions.cruncherEnabled = false
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //调试使用，发布版本删除
+        resConfigs("zh")
+
+        ndk {
+            //abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField("boolean","LOG_DEBUG","false")
+            buildConfigField("String","LOG_MSG","\"MEET\"")
+            buildConfigField("String","SP_NAME","\"ConFig\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            buildConfigField("boolean","LOG_DEBUG","true")
+            buildConfigField("String","LOG_MSG","\"MEET\"")
+            buildConfigField("String","SP_NAME","\"ConFig\"")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation rootProject.ext.dependencies.appcompat
+    implementation rootProject.ext.dependencies.constraintlayout
+    implementation project(path: ':formwork')
+    implementation files('libs\\AMap3DMap_7.2.1_AMapNavi_7.2.0_AMapSearch_7.1.0_AMapLocation_4.9.0_20200302.jar')
+    implementation 'com.google.android.material:material:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'//flycotablayout
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0.3'
+}

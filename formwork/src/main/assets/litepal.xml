@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="NewFriend" />
+
+    <list>
+        <mapping class="com.tang.xu.formwork.entity.LitePalEntity" />
+        <mapping class="com.tang.xu.formwork.entity.CallEntity" />
+    </list>
+
+    <version value="2" />
+
+
+</litepal>

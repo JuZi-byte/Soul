@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.AddFriendActivity"
+    android:background="#03A9F4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="#03A9F4">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/img_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:text="添加好友"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_17" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="#03A9F4">
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:src="@drawable/img_contact_icon" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:text="搜索通讯录好友"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="9"
+            android:background="@drawable/shape"
+            android:src="@drawable/img_contact_icon"
+            android:textColor="#1B1B1B"
+            android:textSize="@dimen/sp_17" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:src="@drawable/img_search" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/layout_no"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

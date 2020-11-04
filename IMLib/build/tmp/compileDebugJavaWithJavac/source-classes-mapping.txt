@@ -1,0 +1,2 @@
+io/rong/imlib/BuildConfig.java
+ io.rong.imlib.BuildConfig

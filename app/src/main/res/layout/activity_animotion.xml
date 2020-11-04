@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AnimotionActivity">
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_100">
+
+        <ImageView
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:src="@drawable/img_guide_point_p"
+            android:id="@+id/point_1"/>
+
+        <ImageView
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:src="@drawable/img_guide_point"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/point_2"/>
+
+        <ImageView
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:src="@drawable/img_guide_point"
+            android:id="@+id/point_3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15">
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="50dp"
+            android:id="@+id/music_button"/>
+
+        <TextView
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="@dimen/sp_15"
+            android:text="跳过"
+            android:textColor="#1B1B1B"
+            android:gravity="center_vertical"
+            android:id="@+id/next"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
