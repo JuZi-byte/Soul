@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.tang.xu.formwork.base.BaseUiActivity;
 import com.tang.xu.formwork.utils.FileMessage;
+import com.tang.xu.formwork.utils.LoginUtils;
 import com.tang.xu.mysoul.R;
 import com.uuzuche.lib_zxing.activity.CaptureFragment;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
@@ -34,6 +35,7 @@ public class QrCodeActivity extends BaseUiActivity implements View.OnClickListen
             bundle.putString(CodeUtils.RESULT_STRING, result);
             resultIntent.putExtras(bundle);
             setResult(RESULT_OK, resultIntent);
+            LoginUtils.LogE("txj");
             finish();
         }
 
